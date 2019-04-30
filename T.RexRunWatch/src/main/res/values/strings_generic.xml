@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="integerVersionCodeNewUpdatePhone" translatable="false">wear_integer_version_code_new_update_phone</string>
+    <string name="stringVersionNameNewUpdatePhone" translatable="false">wear_string_version_name_new_update_phone</string>
+    <string name="stringUpcomingChangeLogPhone" translatable="false">wear_string_upcoming_change_log_phone</string>
+    <string name="stringUpcomingChangeLogSummaryPhone" translatable="false">wear_string_upcoming_change_log_summary_phone</string>
+
+    <string name="booleanPlayStoreLink" translatable="false">boolean_play_store_link</string>
+    <string name="stringPlayStoreLink" translatable="false">string_play_store_link</string>
+    <string name="booleanShowPlayStoreLinkDialogue" translatable="false">boolean_play_store_link_dialogue</string>
+    <string name="stringPlayStoreLinkDialogue" translatable="false">string_play_store_link_dialogue</string>
+
+    <string name="play_store_link" translatable="false">https://play.google.com/store/apps/details?id=</string>
+
+</resources>

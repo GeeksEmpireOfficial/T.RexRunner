@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "413676652385",
+    "firebase_url": "https://t-rex-runner.firebaseio.com",
+    "project_id": "t-rex-runner",
+    "storage_bucket": "t-rex-runner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413676652385:android:3d693a8fe5f8d633",
+        "android_client_info": {
+          "package_name": "net.geekstools.trexrunner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413676652385-l62gguu3bvks6tth8fii24t99nsb1ba2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.geekstools.trexrunner",
+            "certificate_hash": "c5cd7506b33435571eb57702f30fdcb2d47b7f6d"
+          }
+        },
+        {
+          "client_id": "413676652385-10942o1rj9thekoi6qs25tkv2s4j0c1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN4-auYFiJzdw_eP2JNLKiZAOtaBIRXhM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413676652385-10942o1rj9thekoi6qs25tkv2s4j0c1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

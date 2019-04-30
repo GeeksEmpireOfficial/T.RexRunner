@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">T. Rex Runner</string>
+    <string name="taptoplay">Tap To Jump</string>
+
+    <string name="updateAvailable">New Update Available | Click Here to Install…!</string>
+    <string name="rate">Please Rate &amp; Write Review</string>
+
+    <string name="supportTitle">Support Center</string>
+    <string name="supportDesc">Help &amp; Feedback</string>
+    <string name="support">Support@GeeksEmpire.net</string>
+    <string name="feedback_tag">T. Rex Runner Direct Help | Feedback</string>
+    <string name="alphaTitle">Thanks for Helping me</string>
+
+</resources>

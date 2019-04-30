@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="GeeksEmpire.Dialogue.Day" parent="@android:style/Theme.DeviceDefault.Light.Dialog.Alert" tools:targetApi="22">
+        <item name="android:colorAccent">@color/default_color</item>
+        <item name="android:textColorPrimary">@color/dark</item>
+        <item name="android:background">@color/light</item>
+    </style>
+
+</resources>

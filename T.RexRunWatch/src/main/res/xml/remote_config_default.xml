@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>wear_integer_version_code_new_update_phone</key>
+        <value>0</value>
+    </entry>
+    <entry>
+        <key>wear_string_version_name_new_update_phone</key>
+        <value>ZERO</value>
+    </entry>
+    <entry>
+        <key>wear_string_upcoming_change_log_phone</key>
+        <value>
+            New Features Available | Click Here to See…!
+        </value>
+    </entry>
+    <entry>
+        <key>wear_string_upcoming_change_log_summary_phone</key>
+        <value>
+            New Features Available | Click Here to See…!
+        </value>
+    </entry>
+
+    <entry>
+        <key>boolean_play_store_link</key>
+        <value>
+            false
+        </value>
+    </entry>
+    <entry>
+        <key>string_play_store_link</key>
+        <value>
+            https://play.google.com/store/apps/dev?id=8263190182709725073
+        </value>
+    </entry>
+    <entry>
+        <key>boolean_play_store_link_dialogue</key>
+        <value>
+            false
+        </value>
+    </entry>
+    <entry>
+        <key>string_play_store_link_dialogue</key>
+        <value>
+            Please, Support Me By Installing My Apps On Your Smartphone 😉 👍
+        </value>
+    </entry>
+</defaultsMap>

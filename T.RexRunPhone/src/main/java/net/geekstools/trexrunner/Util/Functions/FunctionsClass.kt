@@ -45,6 +45,7 @@ class FunctionsClass {
                 .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
                 .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
                 .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
+                .addTestDevice("5901E5EE74F9B6652E05621140664A54")
                 .build())
         rewardedVideoAdInstance.rewardedVideoAdListener = object : RewardedVideoAdListener {
             override fun onRewardedVideoAdLoaded() {
@@ -116,6 +117,7 @@ class FunctionsClass {
                 .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
                 .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
                 .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
+                .addTestDevice("5901E5EE74F9B6652E05621140664A54")
                 .build()
         val interstitialAd: InterstitialAd = InterstitialAd(context)
         interstitialAd.adUnitId = context.getString(R.string.ad_unit_interstitial)

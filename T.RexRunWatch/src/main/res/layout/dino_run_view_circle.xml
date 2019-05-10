@@ -41,5 +41,3 @@
             android:fontFamily="monospace" />
     </RelativeLayout>
 </android.support.wear.widget.BoxInsetLayout><!--
-
-        android.support.wear.widget.BoxInsetLayout-->

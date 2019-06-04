@@ -40,7 +40,8 @@
         <activity
             android:name=".UnityPlayerActivity"
             android:label="@string/app_name"
-            android:configChanges="keyboardHidden"></activity>
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden" />
 
         <service android:name=".Util.CloudNotificationHandler">
             <intent-filter>

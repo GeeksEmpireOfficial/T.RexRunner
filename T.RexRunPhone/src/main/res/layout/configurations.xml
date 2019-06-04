@@ -1,14 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/grand_canyon">
 
     <ImageView
         android:id="@+id/playGame"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_centerInParent="true"
-        android:tint="@color/default_color"
-        android:src="@android:drawable/ic_media_play" />
+        android:src="@drawable/play" />
+
+    <ImageView
+        android:id="@+id/supportView"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/draw_support" />
+
+    <TextView
+        android:id="@+id/rewardVideo"
+        android:layout_width="490dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/video_rewarded_background"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="@string/rewardedVideoInfo"
+        android:textColor="@color/light"
+        android:textSize="12sp"
+        android:visibility="invisible" />
 
 </RelativeLayout>

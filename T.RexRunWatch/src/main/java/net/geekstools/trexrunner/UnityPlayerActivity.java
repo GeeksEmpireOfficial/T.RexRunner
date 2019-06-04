@@ -1,16 +1,16 @@
 package net.geekstools.trexrunner;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.wearable.activity.WearableActivity;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.Window;
 
 import com.unity3d.player.UnityPlayer;
 
-public class UnityPlayerActivity extends Activity {
+public class UnityPlayerActivity extends WearableActivity {
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
     // Setup activity layout
@@ -22,6 +22,8 @@ public class UnityPlayerActivity extends Activity {
         mUnityPlayer = new UnityPlayer(this);
         setContentView(mUnityPlayer);
         mUnityPlayer.requestFocus();
+
+        setAmbientEnabled();
     }
 
     @Override

@@ -11,9 +11,7 @@ import android.os.Build
 import android.preference.PreferenceManager
 import android.telephony.TelephonyManager
 import android.text.Html
-import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.reward.RewardItem
 import com.google.android.gms.ads.reward.RewardedVideoAdListener
@@ -110,58 +108,6 @@ class FunctionsClass {
             }
 
             override fun onRewardedVideoCompleted() {}
-        }
-
-        val adRequest = AdRequest.Builder()
-                .addTestDevice("CDCAA1F20B5C9C948119E886B31681DE")
-                .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
-                .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
-                .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
-                .addTestDevice("5901E5EE74F9B6652E05621140664A54")
-                .build()
-        val interstitialAd: InterstitialAd = InterstitialAd(context)
-        interstitialAd.adUnitId = context.getString(R.string.ad_unit_interstitial)
-        interstitialAd.setImmersiveMode(true)
-        interstitialAd.loadAd(adRequest)
-        interstitialAd.adListener = object : AdListener() {
-            override fun onAdLoaded() {
-                interstitialAd.show()
-
-                val intentFilter = IntentFilter()
-                intentFilter.addAction("SHOW_INTERSTITIAL_ADS")
-                intentFilter.addAction("LOAD_INTERSTITIAL_ADS")
-                val broadcastReceiver = object : BroadcastReceiver() {
-                    override fun onReceive(context: Context, intent: Intent) {
-                        if (intent.action == "SHOW_INTERSTITIAL_ADS") {
-                            interstitialAd.show()
-                        } else if (intent.action == "LOAD_INTERSTITIAL_ADS") {
-                            interstitialAd.loadAd(adRequest)
-
-                        }
-                    }
-                }
-                context.registerReceiver(broadcastReceiver, intentFilter)
-            }
-
-            override fun onAdFailedToLoad(errorCode: Int) {
-                interstitialAd.loadAd(adRequest)
-            }
-
-            override fun onAdOpened() {
-
-            }
-
-            override fun onAdClicked() {
-
-            }
-
-            override fun onAdLeftApplication() {
-
-            }
-
-            override fun onAdClosed() {
-
-            }
         }
     }
 

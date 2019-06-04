@@ -10,7 +10,6 @@
         android:icon="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
-        android:supportsRtl="true"
         android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
         <meta-data
             android:name="com.google.android.gms.version"
@@ -24,22 +23,24 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/default_color"
             tools:node="replace" />
-        <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true" />
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/ad_app_id" />
 
         <activity
-            android:name=".DinoRunnerActivity"
-            android:screenOrientation="sensorLandscape">
+            android:name=".Configurations"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".UnityPlayerActivity"
+            android:label="@string/app_name"
+            android:configChanges="keyboardHidden"></activity>
 
         <service android:name=".Util.CloudNotificationHandler">
             <intent-filter>

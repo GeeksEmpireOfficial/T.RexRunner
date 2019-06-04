@@ -125,6 +125,8 @@ class FunctionsClass {
         interstitialAd.loadAd(adRequest)
         interstitialAd.adListener = object : AdListener() {
             override fun onAdLoaded() {
+                interstitialAd.show()
+
                 val intentFilter = IntentFilter()
                 intentFilter.addAction("SHOW_INTERSTITIAL_ADS")
                 intentFilter.addAction("LOAD_INTERSTITIAL_ADS")

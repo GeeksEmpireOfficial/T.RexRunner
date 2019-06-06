@@ -44,6 +44,7 @@ class Configurations : WearableActivity() {
                     println("RemoteIntent.RESULT_OK")
                     if (functionsClass.isFirstTimeOpen() || firebaseRemoteConfig.getBoolean(getString(R.string.booleanShowPlayStoreLinkDialogue))) {
                         ConfirmationOverlay()
+                                .setType(ConfirmationOverlay.SUCCESS_ANIMATION)
                                 .setMessage(firebaseRemoteConfig.getString(getString(R.string.stringPlayStoreLinkDialogue)))
                                 .setDuration(1500 * 1)
                                 .showOn(this@Configurations)
@@ -56,6 +57,34 @@ class Configurations : WearableActivity() {
                     println("Unexpected Result $resultCode")
                 }
             }
+        }
+
+        reward.setOnClickListener {
+            val intentPlayStore = Intent(Intent.ACTION_VIEW)
+                    .addCategory(Intent.CATEGORY_BROWSABLE)
+                    .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    .setData(Uri.parse(getString(R.string.play_store_link) + packageName))
+            RemoteIntent.startRemoteActivity(
+                    applicationContext,
+                    intentPlayStore,
+                    object : ResultReceiver(Handler()) {
+                        override protected fun onReceiveResult(resultCode: Int, resultData: Bundle?) {
+                            if (resultCode == RemoteIntent.RESULT_OK) {
+                                println("RemoteIntent.RESULT_OK")
+                                if (functionsClass.isFirstTimeOpen() || firebaseRemoteConfig.getBoolean(getString(R.string.booleanShowPlayStoreLinkDialogue))) {
+                                    ConfirmationOverlay()
+                                            .setType(ConfirmationOverlay.OPEN_ON_PHONE_ANIMATION)
+                                            .setMessage(getString(R.string.playOnPhone))
+                                            .setDuration((1000 * 1.9).toInt())
+                                            .showOn(this@Configurations)
+                                }
+                            } else if (resultCode == RemoteIntent.RESULT_FAILED) {
+                                println("RemoteIntent.RESULT_FAILED")
+                            } else {
+                                println("Unexpected Result $resultCode")
+                            }
+                        }
+                    })
         }
 
         firebaseRemoteConfig = FirebaseRemoteConfig.getInstance()

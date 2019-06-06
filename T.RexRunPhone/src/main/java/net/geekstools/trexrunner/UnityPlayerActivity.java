@@ -125,9 +125,4 @@ public class UnityPlayerActivity extends Activity {
     public boolean onGenericMotionEvent(MotionEvent event) {
         return mUnityPlayer.injectEvent(event);
     }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-    }
 }

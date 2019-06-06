@@ -11,4 +11,14 @@
         android:layout_centerInParent="true"
         android:src="@drawable/play" />
 
+    <ImageView
+        android:id="@+id/reward"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="7dp"
+        android:padding="7dp"
+        android:src="@drawable/reward" />
+
 </RelativeLayout>

@@ -9,7 +9,7 @@ import net.geekstools.trexrunner.BuildConfig
 
 class CloudNotificationHandler : FirebaseMessagingService() {
 
-    override fun onMessageReceived(remoteMessage: RemoteMessage?) {
+    override fun onMessageReceived(remoteMessage: RemoteMessage) {
         if (!BuildConfig.DEBUG) {
             Log.d(">>> ", "From: " + remoteMessage!!.from!!)
             Log.d(">>> ", "Notification Message Body: " + remoteMessage.notification!!.body!!)

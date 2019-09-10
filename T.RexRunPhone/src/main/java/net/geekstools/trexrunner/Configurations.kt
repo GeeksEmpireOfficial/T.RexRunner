@@ -13,6 +13,7 @@ import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import kotlinx.android.synthetic.main.configurations.*
 import net.geekstools.trexrunner.Util.Functions.FunctionsClass
+import net.geekstools.trexrunner.Util.Functions.PublicVariable
 
 class Configurations : Activity() {
 
@@ -22,6 +23,8 @@ class Configurations : Activity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        PublicVariable.eligibleLoadShowAds = true
+
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         setContentView(R.layout.configurations)
 
@@ -151,6 +154,8 @@ class Configurations : Activity() {
 
     override fun onResume() {
         super.onResume()
+        PublicVariable.eligibleLoadShowAds = true
+
         val rewardedPromotionCode = functionsClass.readPreference(".NoAdsRewardedInfo", "RewardedPromotionCode", 0)
         if (rewardedPromotionCode >= 33 && functionsClass.readPreference(".NoAdsRewardedInfo", "Requested", false) == true) {
             rewardVideo.visibility = View.INVISIBLE
@@ -183,6 +188,11 @@ class Configurations : Activity() {
 
                     }
                 })
+    }
+
+    override fun onPause() {
+        super.onPause()
+        PublicVariable.eligibleLoadShowAds = false
     }
 
     override fun onBackPressed() {

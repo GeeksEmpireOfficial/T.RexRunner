@@ -3,17 +3,17 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion '28.0.3'
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
 
     defaultConfig {
         applicationId "net.geekstools.trexrunner"
 
         minSdkVersion 25
-        targetSdkVersion 28
+        targetSdkVersion 29
 
-        versionCode 1003
-        versionName "1003"
+        versionCode 1005
+        versionName "1005"
     }
     buildTypes {
         release {
@@ -26,18 +26,18 @@ android {
 dependencies {
     implementation files ('libs/unity-classes.jar')
 
-    compileOnly 'com.google.android.wearable:wearable:2.4.0'
-    implementation 'com.google.android.support:wearable:2.4.0'
+    compileOnly 'com.google.android.wearable:wearable:2.5.0'
+    implementation 'com.google.android.support:wearable:2.5.0'
 
     implementation 'androidx.wear:wear:1.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
-    implementation 'com.google.android.gms:play-services-wearable:16.0.1'
+    implementation 'com.google.android.gms:play-services-wearable:17.0.0'
 
-    implementation 'com.google.firebase:firebase-core:16.0.9'
-    implementation 'com.google.firebase:firebase-messaging:18.0.0'
-    implementation 'com.google.firebase:firebase-config:17.0.0'
+    implementation 'com.google.firebase:firebase-core:17.2.0'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    implementation 'com.google.firebase:firebase-config:19.0.0'
 
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.50"
 }
 apply plugin: 'com.google.gms.google-services'

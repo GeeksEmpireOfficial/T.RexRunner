@@ -13,11 +13,25 @@ import com.unity3d.player.UnityPlayer;
 public class UnityPlayerActivity extends Activity {
     protected UnityPlayer mUnityPlayer; // don't change the name of this variable; referenced from native code
 
+    // Override this in your custom UnityPlayerActivity to tweak the command line arguments passed to the Unity Android Player
+    // The command line arguments are passed as a string, separated by spaces
+    // UnityPlayerActivity calls this from 'onCreate'
+    // Supported: -force-gles20, -force-gles30, -force-gles31, -force-gles31aep, -force-gles32, -force-gles, -force-vulkan
+    // See https://docs.unity3d.com/Manual/CommandLineArguments.html
+    // @param cmdLine the current command line arguments, may be null
+    // @return the modified command line string or null
+    protected String updateUnityCommandLineArguments(String cmdLine) {
+        return cmdLine;
+    }
+
     // Setup activity layout
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
+
+        String cmdLine = updateUnityCommandLineArguments(getIntent().getStringExtra("unity"));
+        getIntent().putExtra("unity", cmdLine);
 
         mUnityPlayer = new UnityPlayer(this);
         setContentView(mUnityPlayer);
@@ -31,6 +45,7 @@ public class UnityPlayerActivity extends Activity {
         // to get the intent set on launch. To update that after launch we have to manually
         // replace the intent with the one caught here.
         setIntent(intent);
+        mUnityPlayer.newIntent(intent);
     }
 
     // Quit Unity

@@ -7,4 +7,15 @@
         <item name="android:background">@color/light</item>
     </style>
 
+    <style name="UnityThemeSelector" parent="BaseUnityTheme">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+
+    <style name="UnityThemeSelector.Translucent" parent="@style/UnityThemeSelector">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="BaseUnityTheme" parent="android:Theme.Material.Light.NoActionBar.Fullscreen"></style>
+
 </resources>

@@ -35,7 +35,7 @@ class FunctionsClass {
         this.activity = activityInit
         this.context = contextInit
 
-        MobileAds.initialize(context, context.getString(R.string.ad_app_id))
+        MobileAds.initialize(context, context.getString(R.string.AdAppId))
         val rewardedVideoAdInstance = MobileAds.getRewardedVideoAdInstance(context)
         rewardedVideoAdInstance.setImmersiveMode(true)
         rewardedVideoAdInstance.loadAd(context.getString(R.string.ad_unit_reward), AdRequest.Builder()
@@ -75,15 +75,12 @@ class FunctionsClass {
                     context.sendBroadcast(Intent("REWARDED_PROMOTION_CODE"))
                 } else {
                     context.sendBroadcast(Intent("RELOAD_REWARDED_VIDEO"))
-
-                    if (PublicVariable.eligibleLoadShowAds) {
-                        rewardedVideoAdInstance.loadAd(context.getString(R.string.ad_unit_reward), AdRequest.Builder()
-                                .addTestDevice("CDCAA1F20B5C9C948119E886B31681DE")
-                                .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
-                                .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
-                                .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
-                                .build())
-                    }
+                    rewardedVideoAdInstance.loadAd(context.getString(R.string.ad_unit_reward), AdRequest.Builder()
+                            .addTestDevice("CDCAA1F20B5C9C948119E886B31681DE")
+                            .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
+                            .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
+                            .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
+                            .build())
                 }
             }
 
@@ -96,28 +93,21 @@ class FunctionsClass {
                 saveFile(".NoAdsRewarded", context.packageName)
             }
 
-            override fun onRewardedVideoAdLeftApplication() {
-
-            }
+            override fun onRewardedVideoAdLeftApplication() {}
 
             override fun onRewardedVideoAdFailedToLoad(failedCode: Int) {
                 if (BuildConfig.DEBUG) {
-                    println("Ad Failed $failedCode")
+                    println("Ad Failed $failedCode | RewardedAds")
                 }
-
-                if (PublicVariable.eligibleLoadShowAds) {
-                    rewardedVideoAdInstance.loadAd(context.getString(R.string.ad_unit_reward), AdRequest.Builder()
-                            .addTestDevice("CDCAA1F20B5C9C948119E886B31681DE")
-                            .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
-                            .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
-                            .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
-                            .build())
-                }
+                rewardedVideoAdInstance.loadAd(context.getString(R.string.ad_unit_reward), AdRequest.Builder()
+                        .addTestDevice("CDCAA1F20B5C9C948119E886B31681DE")
+                        .addTestDevice("D101234A6C1CF51023EE5815ABC285BD")
+                        .addTestDevice("65B5827710CBE90F4A99CE63099E524C")
+                        .addTestDevice("DD428143B4772EC7AA87D1E2F9DA787C")
+                        .build())
             }
 
-            override fun onRewardedVideoCompleted() {
-
-            }
+            override fun onRewardedVideoCompleted() {}
         }
     }
 

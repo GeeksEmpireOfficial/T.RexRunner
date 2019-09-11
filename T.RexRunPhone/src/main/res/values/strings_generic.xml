@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <string name="game_view_content_description" translatable="false">Game view</string>
+
     <string name="rewardedVideoInfo" translatable="false">
         \n
         <big>Click to See Video Ads to Get
@@ -34,7 +36,7 @@
     <string name="stringUpcomingChangeLogPhone" translatable="false">string_upcoming_change_log_phone</string>
     <string name="stringUpcomingChangeLogSummaryPhone" translatable="false">string_upcoming_change_log_summary_phone</string>
 
-    <string name="ad_app_id" translatable="false">ca-app-pub-2920235108594210~9709242675</string>
+    <string name="AdAppId" translatable="false">ca-app-pub-2920235108594210~9709242675</string>
     <string name="ad_unit_reward" translatable="false">ca-app-pub-2920235108594210/1288946736</string>
     <string name="ad_unit_interstitial">ca-app-pub-2920235108594210/4068039384</string>
 

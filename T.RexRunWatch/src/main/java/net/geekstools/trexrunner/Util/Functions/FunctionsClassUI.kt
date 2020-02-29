@@ -6,9 +6,7 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
-import android.graphics.Bitmap
-import android.graphics.Canvas
-import android.graphics.drawable.*
+import android.graphics.drawable.Icon
 import android.net.Uri
 import android.os.Build
 import android.text.Html
@@ -50,31 +48,5 @@ class FunctionsClassUI(var context: Context) {
         } catch (e: Exception) {
             e.printStackTrace()
         }
-    }
-
-    fun drawableToBitmap(drawable: Drawable): Bitmap? {
-        var bitmap: Bitmap? = null
-        if (drawable is VectorDrawable) {
-            bitmap = Bitmap.createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight, Bitmap.Config.ARGB_8888)
-            val canvas = Canvas(bitmap!!)
-            drawable.setBounds(0, 0, canvas.width, canvas.height)
-            drawable.draw(canvas)
-        } else if (drawable is BitmapDrawable) {
-            if (drawable.bitmap != null) {
-                bitmap = drawable.bitmap
-            }
-        } else if (drawable is LayerDrawable) {
-
-            bitmap = Bitmap.createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight, Bitmap.Config.ARGB_8888)
-            val canvas = Canvas(bitmap!!)
-            drawable.setBounds(0, 0, canvas.width, canvas.height)
-            drawable.draw(canvas)
-        } else {
-            bitmap = Bitmap.createBitmap(drawable.intrinsicWidth, drawable.intrinsicHeight, Bitmap.Config.ARGB_8888)
-            val canvas = Canvas(bitmap!!)
-            drawable.setBounds(0, 0, canvas.width, canvas.height)
-            drawable.draw(canvas)
-        }
-        return bitmap
     }
 }

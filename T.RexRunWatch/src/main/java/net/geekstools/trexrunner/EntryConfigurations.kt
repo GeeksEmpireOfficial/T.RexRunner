@@ -127,8 +127,8 @@ class EntryConfigurations : WearableActivity() {
                                         resultReceiver)
                             }
                         }
-                    } else {
 
+                        createPopupShortcutAd(firebaseRemoteConfig)
                     }
                 })
     }
@@ -158,27 +158,18 @@ class EntryConfigurations : WearableActivity() {
                             resource?.let { icon ->
 
                                 shortcutActionLink?.let { actionLink ->
+                                    runOnUiThread {
+                                        adShortcut.contentDescription = shortcutLabel
+                                        adShortcut.setImageDrawable(icon)
 
+                                        adShortcut.setOnClickListener {
+                                            Intent(Intent.ACTION_VIEW).apply {
+                                                data = Uri.parse(actionLink)
 
-                                    /*
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    *
-                                    * */
-
+                                                startActivity(this)
+                                            }
+                                        }
+                                    }
                                 }
                             }
 

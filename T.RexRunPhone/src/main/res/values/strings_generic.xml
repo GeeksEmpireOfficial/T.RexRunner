@@ -37,7 +37,11 @@
     <string name="stringUpcomingChangeLogSummaryPhone" translatable="false">string_upcoming_change_log_summary_phone</string>
 
     <string name="AdAppId" translatable="false">ca-app-pub-2920235108594210~9709242675</string>
-    <string name="ad_unit_reward" translatable="false">ca-app-pub-2920235108594210/1288946736</string>
-    <string name="ad_unit_interstitial">ca-app-pub-2920235108594210/4068039384</string>
+    <string name="adUnitReward" translatable="false">ca-app-pub-2920235108594210/1288946736</string>
+    <string name="adUnitInterstitial">ca-app-pub-2920235108594210/4068039384</string>
 
+    <string name="shortcutId" translatable="false">shortcut_id</string>
+    <string name="shortcutLabel" translatable="false">shortcut_label</string>
+    <string name="shortcutIconLink" translatable="false">shortcut_icon_link</string>
+    <string name="shortcutActionLink" translatable="false">shortcut_action_link</string>
 </resources>

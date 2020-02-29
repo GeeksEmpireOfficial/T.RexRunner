@@ -13,4 +13,8 @@
 
     <string name="play_store_link" translatable="false">https://play.google.com/store/apps/details?id=</string>
 
+    <string name="shortcutId" translatable="false">shortcut_id</string>
+    <string name="shortcutLabel" translatable="false">shortcut_label</string>
+    <string name="shortcutIconLink" translatable="false">shortcut_icon_link</string>
+    <string name="shortcutActionLink" translatable="false">shortcut_action_link</string>
 </resources>

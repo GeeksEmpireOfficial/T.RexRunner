@@ -4,11 +4,11 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.4.0'
+        classpath 'com.android.tools.build:gradle:3.6.1'
     }
 }
 
-apply plugin: 'android-library'
+apply plugin: 'com.android.library'
 
 dependencies {
     implementation fileTree(dir: 'bin', include: ['*.jar'])
@@ -27,7 +27,8 @@ android {
     }
 
     compileSdkVersion 29
-    buildToolsVersion '29.0.2'
+    buildToolsVersion '29.0.3'
+
     defaultConfig {
         targetSdkVersion 29
     }

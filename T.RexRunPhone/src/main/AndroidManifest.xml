@@ -38,7 +38,7 @@
             tools:replace="android:theme" />-->
 
         <activity
-            android:name=".Configurations"
+            android:name=".EntryConfigurations"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:configChanges="keyboardHidden"
@@ -51,12 +51,12 @@
         </activity>
 
         <activity
-            android:name=".UnityPlayerActivity"
+            android:name=".GamePlay.UnityPlayerActivity"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:configChanges="keyboardHidden" />
 
-        <service android:name=".Util.CloudNotificationHandler">
+        <service android:name=".Util.CloudFunctionality.CloudNotificationHandler">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

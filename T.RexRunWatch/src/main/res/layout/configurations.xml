@@ -6,29 +6,28 @@
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/playGame"
-        android:layout_width="113dp"
-        android:layout_height="113dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:padding="9dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/play" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/reward"
-        android:layout_width="55dp"
+        android:id="@+id/rewardView"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="7dp"
-        android:padding="7dp"
+        android:padding="9dp"
         android:scaleType="fitCenter"
         android:src="@drawable/reward" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/adShortcut"
-        android:layout_width="55dp"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="7dp"
-        android:padding="7dp"
+        android:padding="9dp"
         android:scaleType="fitCenter" />
 </RelativeLayout>

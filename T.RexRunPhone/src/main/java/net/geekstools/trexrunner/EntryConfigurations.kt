@@ -61,7 +61,7 @@ class EntryConfigurations : Activity() {
                     "Send an Email",
                     "Contact via Forum",
                     "Rate & Write Review",
-                    "Floating Shortcuts",
+                    "Float It",
                     "Super Shortcuts",
                     "Pin a Pic on Map"
             )

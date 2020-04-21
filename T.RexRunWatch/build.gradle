@@ -18,6 +18,7 @@ android {
         versionCode 1011
         versionName "${versionCode}"
     }
+
     buildTypes {
         release {
             minifyEnabled true
